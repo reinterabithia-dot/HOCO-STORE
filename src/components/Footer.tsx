@@ -38,27 +38,27 @@ export default function Footer() {
           {/* Brand block (5 columns) */}
           <div className="md:col-span-5 flex flex-col items-start">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-zinc-900 border border-brand-red/30 flex items-center justify-center">
-                <Swords className="w-5 h-5 text-brand-red-light" />
+              <div className="w-10 h-10 rounded-lg bg-slate-900 border border-sky-400/30 flex items-center justify-center">
+                <Swords className="w-5 h-5 text-sky-400" />
               </div>
               <span className="font-display font-extrabold text-2xl tracking-widest text-white uppercase">
                 {BRAND_INFO.name.split(' ')[0]}
-                <span className="text-brand-red-light ml-1 font-display">{BRAND_INFO.name.split(' ')[1]}</span>
+                <span className="text-sky-400 ml-1 font-display">{BRAND_INFO.name.split(' ')[1]}</span>
               </span>
             </div>
             
-            <p className="font-display font-extrabold text-sm tracking-[0.2em] text-brand-orange-light uppercase mb-3">
+            <p className="font-display font-extrabold text-sm tracking-[0.2em] text-cyan-300 uppercase mb-3">
               "{BRAND_INFO.tagline}"
             </p>
             
-            <p className="text-zinc-500 text-xs sm:text-sm font-light leading-relaxed max-w-sm font-sans">
+            <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed max-w-sm font-sans">
               {BRAND_INFO.description}
             </p>
           </div>
 
           {/* Quick Links menu (4 columns) */}
           <div className="md:col-span-4">
-            <h4 className="font-display font-extrabold text-xs tracking-[0.25em] text-white uppercase mb-5 border-l-2 border-brand-red pl-3">
+            <h4 className="font-display font-extrabold text-xs tracking-[0.25em] text-white uppercase mb-5 border-l-2 border-sky-400 pl-3">
               NAVIGATION
             </h4>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
@@ -74,7 +74,7 @@ export default function Footer() {
                   key={link.name}
                   href={`#${link.id}`}
                   onClick={(e) => handleNavClick(e, link.id)}
-                  className="text-zinc-500 hover:text-white text-xs sm:text-sm uppercase tracking-widest font-display font-bold transition-all duration-200"
+                  className="text-slate-400 hover:text-sky-400 text-xs sm:text-sm uppercase tracking-widest font-display font-bold transition-all duration-200"
                 >
                   {link.name}
                 </a>
@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Contact block (3 columns) */}
           <div className="md:col-span-3 flex flex-col items-start">
-            <h4 className="font-display font-extrabold text-xs tracking-[0.25em] text-white uppercase mb-5 border-l-2 border-brand-orange pl-3">
+            <h4 className="font-display font-extrabold text-xs tracking-[0.25em] text-white uppercase mb-5 border-l-2 border-cyan-400 pl-3">
               CONTACT
             </h4>
             
@@ -92,18 +92,18 @@ export default function Footer() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2.5 text-zinc-400 hover:text-emerald-400 transition-colors group mb-4"
+              className="flex items-center gap-2.5 text-slate-300 hover:text-sky-400 transition-colors group mb-4"
             >
-              <div className="p-2 rounded bg-zinc-950 border border-zinc-900 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/5 transition-colors">
-                <MessageSquare className="w-4 h-4 text-emerald-400" />
+              <div className="p-2 rounded bg-slate-950 border border-slate-800 group-hover:border-sky-400/40 group-hover:bg-sky-500/10 transition-colors">
+                <MessageSquare className="w-4 h-4 text-sky-400" />
               </div>
               <div className="text-left">
-                <span className="block text-[10px] text-zinc-600 font-mono font-bold leading-none mb-1">WHATSAPP ADMIN</span>
+                <span className="block text-[10px] text-slate-500 font-mono font-bold leading-none mb-1">WHATSAPP ADMIN</span>
                 <span className="text-sm font-mono font-semibold">+{WHATSAPP_NUMBER}</span>
               </div>
             </a>
 
-            <div className="flex items-center gap-2 text-xs text-zinc-500 font-mono mt-2">
+            <div className="flex items-center gap-2 text-xs text-slate-400 font-mono mt-2">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>GUARANTEED SECURE RAID</span>
             </div>

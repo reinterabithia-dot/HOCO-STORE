@@ -69,16 +69,16 @@ export default function Navbar({ onScrollToOrder }: NavbarProps) {
             className="flex items-center gap-2 group cursor-pointer"
             id="nav-logo"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-900 border border-brand-orange/30 group-hover:border-brand-red/60 transition-colors duration-300">
-              <Swords className="w-5 h-5 text-brand-red-light group-hover:text-brand-orange-light transition-colors duration-300" />
-              <div className="absolute inset-0 rounded-lg bg-brand-red-light/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 glow-red"></div>
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-slate-900 border border-sky-400/30 group-hover:border-blue-500/80 transition-colors duration-300 shadow-sm">
+              <Swords className="w-5 h-5 text-sky-400 group-hover:text-cyan-300 transition-colors duration-300" />
+              <div className="absolute inset-0 rounded-lg bg-sky-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 glow-blue"></div>
             </div>
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-2xl tracking-widest text-white leading-none">
                 {BRAND_INFO.name.split(' ')[0]}
-                <span className="text-brand-red-light ml-1 font-display">{BRAND_INFO.name.split(' ')[1]}</span>
+                <span className="text-sky-400 ml-1 font-display">{BRAND_INFO.name.split(' ')[1]}</span>
               </span>
-              <span className="text-[9px] text-zinc-500 font-mono tracking-[0.25em] font-bold uppercase leading-none mt-1">
+              <span className="text-[9px] text-slate-400 font-mono tracking-[0.25em] font-bold uppercase leading-none mt-1">
                 TACTICAL BOOST
               </span>
             </div>
@@ -91,11 +91,11 @@ export default function Navbar({ onScrollToOrder }: NavbarProps) {
                 key={link.name}
                 href={`#${link.target}`}
                 onClick={(e) => handleNavClick(e, link.target)}
-                className="font-display font-semibold text-zinc-300 hover:text-white hover:tracking-wide tracking-widest text-sm uppercase transition-all duration-300 relative py-1 group"
+                className="font-display font-semibold text-slate-300 hover:text-white hover:tracking-wide tracking-widest text-sm uppercase transition-all duration-300 relative py-1 group"
                 id={`navlink-${link.target}`}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red-light transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
@@ -104,11 +104,11 @@ export default function Navbar({ onScrollToOrder }: NavbarProps) {
           <div className="hidden md:block">
             <button
               onClick={onScrollToOrder}
-              className="relative inline-flex items-center justify-center px-6 py-2.5 font-display font-bold uppercase tracking-widest text-xs text-white bg-gradient-to-r from-brand-red to-brand-orange rounded-md overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 group shadow-lg cursor-pointer"
+              className="relative inline-flex items-center justify-center px-6 py-2.5 font-display font-bold uppercase tracking-widest text-xs text-white btn-gradient rounded-md overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 group shadow-lg shadow-blue-600/25 cursor-pointer"
               id="nav-cta-btn"
             >
               <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              <span className="absolute -inset-px bg-gradient-to-r from-brand-red-light to-brand-orange-light rounded-md opacity-0 group-hover:opacity-30 blur-sm transition-opacity"></span>
+              <span className="absolute -inset-px bg-gradient-to-r from-sky-400 to-cyan-400 rounded-md opacity-0 group-hover:opacity-30 blur-sm transition-opacity"></span>
               <span className="relative flex items-center gap-2">
                 ORDER SEKARANG
                 <Shield className="w-4 h-4 animate-pulse text-white" />

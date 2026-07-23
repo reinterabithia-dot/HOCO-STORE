@@ -90,13 +90,13 @@ export default function App() {
           >
             {/* Spinning radar grid */}
             <div className="relative w-40 h-40 flex items-center justify-center">
-              <div className="absolute inset-0 rounded-full border border-dashed border-brand-red-light/20 animate-[spin_10s_linear_infinite]"></div>
-              <div className="absolute inset-4 rounded-full border border-brand-orange-light/10 animate-[spin_5s_linear_infinite_reverse]"></div>
+              <div className="absolute inset-0 rounded-full border border-dashed border-sky-400/30 animate-[spin_10s_linear_infinite]"></div>
+              <div className="absolute inset-4 rounded-full border border-blue-500/20 animate-[spin_5s_linear_infinite_reverse]"></div>
               
               <motion.div
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-16 h-16 rounded-xl bg-zinc-950 border border-brand-red/30 flex items-center justify-center text-brand-red-light shadow-xl glow-red-strong"
+                className="w-16 h-16 rounded-xl bg-slate-900 border border-sky-400/40 flex items-center justify-center text-sky-400 shadow-xl glow-blue"
               >
                 <Swords className="w-8 h-8" />
               </motion.div>
@@ -105,11 +105,11 @@ export default function App() {
             {/* Custom status logs terminal mimicking actual extraction launcher */}
             <div className="mt-8 text-center max-w-xs">
               <h1 className="font-display font-black text-2xl tracking-widest text-white uppercase">
-                HOCO <span className="text-brand-red-light font-display">STORE</span>
+                HOCO <span className="text-sky-400 font-display">STORE</span>
               </h1>
               
-              <div className="mt-4 flex items-center justify-center gap-2 text-[10px] text-zinc-500 font-mono tracking-widest uppercase">
-                <Loader2 className="w-3.5 h-3.5 animate-spin text-brand-orange-light" />
+              <div className="mt-4 flex items-center justify-center gap-2 text-[10px] text-slate-400 font-mono tracking-widest uppercase">
+                <Loader2 className="w-3.5 h-3.5 animate-spin text-sky-400" />
                 <span>ESTABLISHING SECURE COMMS...</span>
               </div>
             </div>
