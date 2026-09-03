@@ -28,7 +28,7 @@ export default function OrderSystem({
 
   if (currentService.id === 'mandor') {
     if (quantity >= 3) {
-      pricePerM = currentService.promoPrice || 11000;
+      pricePerM = currentService.promoPrice || 12000;
       isPromoApplied = true;
     } else {
       pricePerM = currentService.normalPrice;
@@ -48,7 +48,7 @@ export default function OrderSystem({
   useEffect(() => {
     if (selectedServiceId === 'mandor') {
       if (quantity >= 3) {
-        onAddToast('Promo Joki Mandor Aktif! Hemat s/d Rp4.000 / M', 'success');
+        onAddToast('Promo Joki Mandor Aktif! Hemat s/d Rp3.000 / M', 'success');
       }
     }
   }, [quantity, selectedServiceId]);
@@ -184,15 +184,15 @@ Terima kasih.`;
                         {isMandor ? (
                           <div className="flex flex-col items-end">
                             <span className="text-[10px] text-slate-400 line-through leading-none">
-                              {formatIDR(15000)}/M
+                              {formatIDR(s.normalPrice)}/M
                             </span>
                             <span className="text-sm font-bold text-sky-400 leading-none mt-1">
-                              {formatIDR(11000)}/M
+                              {formatIDR(s.promoPrice || 12000)}/M
                             </span>
                           </div>
                         ) : (
                           <span className="text-sm font-bold text-white">
-                            {formatIDR(20000)}/M
+                            {formatIDR(s.pricePerUnit)}/M
                           </span>
                         )}
                       </div>
@@ -331,7 +331,7 @@ Terima kasih.`;
                     ) : (
                       <div className="text-[11px] p-3 bg-blue-950/40 text-sky-200 rounded border border-blue-600/40 flex items-start gap-2 animate-pulse">
                         <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-sky-400" />
-                        <span>✓ Promo Aktif: Order 3M+ harga menjadi Rp 11.000/M</span>
+                        <span>✓ Promo Aktif: Order 3M+ harga menjadi Rp 12.000/M</span>
                       </div>
                     )}
                   </div>

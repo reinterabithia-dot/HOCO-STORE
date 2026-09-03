@@ -15,13 +15,13 @@ export const SERVICES: Service[] = [
     name: 'JOKI MANDOR',
     badge: 'BEST VALUE',
     normalPrice: 15000,
-    promoPrice: 11000,
+    promoPrice: 12000,
     minPromoQty: 3,
     pricePerUnit: 15000, // standard base price
     description: 'Jasa joki Mandor untuk membantu meningkatkan progress akun dengan proses yang efisien dan profesional.',
     buttonText: 'PILIH JOKI MANDOR',
     features: [
-      'Minimal order promo 3M untuk hemat 25%',
+      'Minimal order promo 3M (Hemat Rp3.000/M)',
       'Progress Mandor stabil & aman',
       'Anti rollback / aman dari sanksi',
       'Daily report & screenshot progress',
@@ -123,7 +123,7 @@ export const STEPS: StepItem[] = [
 export const FAQS: FAQItem[] = [
   {
     question: 'Berapa harga Joki Mandor?',
-    answer: 'Harga normal Joki Mandor adalah Rp15.000/M. Harga promo Rp11.000/M berlaku untuk minimal order 3M.'
+    answer: 'Harga normal Joki Mandor adalah Rp15.000/M. Harga promo Rp12.000/M berlaku untuk minimal order 3M.'
   },
   {
     question: 'Berapa harga Joki Koen?',
